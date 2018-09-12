@@ -9,7 +9,7 @@ import classes from './Details.scss';
 import API from '../../axios/api';
 
 class Details extends React.Component {
-	
+
 	state = {
 		beerID: null,
 		prevBeerID: null,
@@ -58,13 +58,18 @@ class Details extends React.Component {
 			})
 	}
 
-	render() {		
+	render() {
 		let details;
 		if (this.state.beerID) {
 			details = <Spinner />;
 
 			if (this.state.beerData) {
-				details = <DetailsBody beerData={this.state.beerData} confirmEvent={this.onBeerRequestHandler} escapeEvent={this.props.escapeEvent} />
+				details = (
+					<DetailsBody
+					beerData={this.state.beerData}
+					confirmEvent={this.onBeerRequestHandler}
+					escapeEvent={this.props.escapeEvent} />
+				);
 			}
 		}
 

@@ -42,7 +42,7 @@ class Featured extends React.Component {
 	componentDidUpdate = (prevProps, prevState) => {
 		if (!this.state.similarBeers.length) {
 			this.fetchSimilarBeers();
-		}	
+		}
 	}
 
 	onBeerChangeHandler = (id) => {
@@ -97,7 +97,7 @@ class Featured extends React.Component {
 		array_ibu.sort( (a,b) => {
 			return a.ibu_diff - b.ibu_diff;
 		});
-		
+
 		return {
 			abv: array_abv[this.random()],
 			ebc: array_ebc[this.random()],
@@ -112,26 +112,26 @@ class Featured extends React.Component {
 			featured = <Spinner />
 
 			if (this.state.similarBeers.length) {
-				const featuredData = this.calculateSimilarBeers();	
+				const featuredData = this.calculateSimilarBeers();
 
 				featured = (
-					<FeaturedContainer>	
+					<FeaturedContainer>
 						{['abv', 'ebc', 'ibu'].map( (param, i) => (
 							<FeaturedItem
 								key={i}
 								data={featuredData[param]}
 								param={param}
-								clickEvent={() => this.onBeerChangeHandler(featuredData[param].id)} />
-						))}								
+								clickEvent={this.onBeerChangeHandler} />
+						))}
 					</FeaturedContainer>
 				);
 				// TODO: prevent displaying same beer and get rid of 'i' in favour of beers' IDs
 			}
-		}		
+		}
 
 		return (
 			<div className={classes.Featured}>
-				{featured}				
+				{featured}
 			</div>
 		);
 	}

@@ -6,10 +6,14 @@ import classes from './FeaturedItem.scss'
 const featuredItem = (props) => {
 	const beer = props.data;
 
+	const onClickHandler = () => {
+		props.clickEvent(beer.id);
+	}
+
 	return (
 		<div
 			className={classes.FeaturedItem}
-			onClick={() => props.clickEvent(beer.id)}>
+			onClick={onClickHandler}>
 			<div className={classes.Image}>
 				<img src={beer.image_url} />
 			</div>

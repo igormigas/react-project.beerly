@@ -15,7 +15,7 @@ import classes from './List.scss';
 import API from '../../axios/api';
 
 class List extends React.Component {
-	
+
 	state = {
 		beers: [],
 		beersLoaded: false,
@@ -69,13 +69,13 @@ class List extends React.Component {
 					<ListItem
 						key={obj.id}
 						data={obj}
-						clickHandler={() => this.onClickItemHandler(obj.id)} />
+						clickEvent={this.onClickItemHandler} />
 				))}
 			</div>
 		)
 	}
 
-	render() {		
+	render() {
 
 		const infiniteScroll = this.state.beers.length ? (
 			<InfiniteScroll
@@ -88,12 +88,12 @@ class List extends React.Component {
 				style={{overflow: 'visible'}}>
 				{this.getMappedListItems()}
 			</InfiniteScroll>
-		) : <InfiniteLoadingBox />;		
+		) : <InfiniteLoadingBox />;
 
 		return (
 			<>
 				<Modal
-					show={this.state.showDetailsModal}					
+					show={this.state.showDetailsModal}
 					escapeHandler={this.onEscapeItemHandler}>
 					<Details
 						beerID={this.state.showDetailsID}
