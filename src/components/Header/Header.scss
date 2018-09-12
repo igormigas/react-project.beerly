@@ -1,0 +1,21 @@
+@import '../../styles/theme';
+
+.Header {
+	margin-top: -120px;
+	margin-bottom: 50px;
+
+	a {
+		color: #777;
+		font-family: $labelFont;
+		font-size: 45px;
+		font-weight: 900;
+	}
+
+	.Color {
+		color: darken($themeColor, 10%);
+	}
+
+	p {
+		font-size: 15px;
+	}
+}

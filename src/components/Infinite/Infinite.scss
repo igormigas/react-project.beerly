@@ -1,0 +1,17 @@
+@import '../../styles/theme';
+
+.WarningBox {
+	margin: 25px 0px;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: $defaultShadow;
+
+	text-align: center;
+}
+
+.LoadingBox {
+	position: relative;
+	display: block;
+	height: 150px;
+}

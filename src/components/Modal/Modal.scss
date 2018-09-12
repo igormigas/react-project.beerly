@@ -1,0 +1,27 @@
+@import '../../styles/theme';
+
+.Modal {
+    z-index: 700;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;    
+    margin: 0px auto; 
+    padding: 15px;  
+    max-height: 100vh; 
+    width: 90%;
+    max-width: 900px;
+
+    
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    box-sizing: border-box;
+    transition: transform 0.5s ease, top 0.5s ease;
+}
+
+@media (min-width: 600px) {
+    .Modal {
+        width: 80%;
+    }
+}

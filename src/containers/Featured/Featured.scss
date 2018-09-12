@@ -1,0 +1,10 @@
+@import '../../styles/theme';
+
+.Featured {
+	position: relative;
+	margin-top: 15px;
+	padding: 25px;
+	min-height: 220px;
+	background-color: white;
+	border-radius: $defaultBorderRadius;
+}

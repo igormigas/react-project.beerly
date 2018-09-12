@@ -1,0 +1,21 @@
+@import '../../styles/theme';
+
+.Details {
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+
+	padding: 25px;
+	min-height: 300px;
+	border-radius: $defaultBorderRadius;
+
+	background-color: white;
+	color: #666;
+}
+
+@media (min-width: 600px) {
+	.Details {
+		flex-flow: row nowrap;
+	}
+}

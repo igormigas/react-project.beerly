@@ -1,0 +1,17 @@
+@import '../../styles/theme';
+
+.Button {
+	display: inline-block;
+	padding: 10px 25px;
+	background-color: lighten($themeColor, 30%);
+	box-shadow: $defaultShadow;
+	border: none;
+	color: inherit; 
+	font-weight: bold;letter-spacing: 0.7px;
+
+	&:hover {
+		background-color: $themeColor;
+		color: black;
+		box-shadow: $hoverShadow;
+	}
+}
